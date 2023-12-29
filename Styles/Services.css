@@ -1,3 +1,8 @@
+body { 
+    background-color: slategrey;
+    background-image: url("https://www.freepik.com/free-photo/close-up-man-shopping-with-laptop_21927524.htm#query=ecommerce&position=6&from_view=search&track=sph&uuid=a7cc7eca-0698-4a0b-a2d8-b9bc17e5091b");
+}
+
 .services-paragraph { 
     padding-top: 7rem;
     display: grid;
