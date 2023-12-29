@@ -5,10 +5,10 @@ $is_invalid = false;
 if (isset($_GET['success']) && $_GET['success'] == 1) {
     // Display success alert
     echo "<script>alert('Registration successful!');</script>";
-    header("Refresh:2; url='MainPage.php'");
+    header("Refresh:2; url='index.php'");
 }
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $mysqli = require __DIR__ . "/Database.php";
+    $mysqli = require __DIR__ . "Database.php";
     $sql = sprintf(
         "SELECT * FROM user
             WHERE USERNAME ='%s'",
@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="Styles/MainPage.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/MainPage.css" />
     <title>Main Page</title>
 </head>
 

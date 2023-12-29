@@ -46,8 +46,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="Styles/VendorPage.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/MyStore.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/VendorPage.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/MyStore.css" />
     <title>Vendor Page</title>
 </head>
 <body>
@@ -97,6 +97,6 @@
         <p>&copy; 2023 eCommerce. All rights reserved.</p>
     </div>
     
-    <script src="script\VendorPage.js"></script>
+    <script src="../script/VendorPage.js"></script>
 </body>
 </html>

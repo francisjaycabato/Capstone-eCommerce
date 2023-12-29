@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="Styles/MainPage.css" />
-    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="../Styles/MainPage.css" />
+    <title>Contact Use</title>
 </head>
 <body>
     <nav class="navbar">        

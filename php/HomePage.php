@@ -62,8 +62,8 @@ if (isset($_SESSION["user_id"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="Styles/HomePage.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/ImgModal.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/HomePage.css" />
+    <link rel="stylesheet" type="text/css" href="../Styles/ImgModal.css" />
     <title>HomePage</title>
 </head>
 <body>
@@ -164,7 +164,7 @@ if (isset($_SESSION["user_id"])){
         <p>&copy; 2023 eCommerce. All rights reserved.</p>
     </div>
 
-    <script src="script\HomePage.js"></script>
-    <script src="script\ImgModal.js"></script>
+    <script src="../script/HomePage.js"></script>
+    <script src="../script/ImgModal.js"></script>
 </body>
 </html>
