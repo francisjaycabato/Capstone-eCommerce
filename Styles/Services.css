@@ -1,0 +1,42 @@
+.services-paragraph { 
+    padding-top: 7rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 2rem;
+
+    /* Make grid container gap centered on screen */
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    justify-content: center;
+    align-items: center
+}
+
+.services-grid-item-header { 
+    padding-bottom: 1rem;
+    text-decoration: underline;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.services-grid-image { 
+    padding-inline: 5rem;
+}
+
+.services-grid-image > img {
+    width: 100;
+    height: 50;
+}
+
+.left {
+    padding-left: 3rem;
+    text-align: right;
+    width: 50rem;
+}
+
+.right { 
+    padding-right: 3rem;
+    text-align: left;
+    width: 50rem;
+}

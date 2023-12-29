@@ -1,0 +1,11 @@
+.store-name { 
+    text-align: center;
+    font-size: xx-large;
+}
+
+.description {
+    margin-inline: auto;
+    text-align: center;
+    font-size: large;
+    width: 50%;
+}
