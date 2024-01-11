@@ -55,7 +55,6 @@ if (isset($_SESSION["user_id"])){
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,7 +115,7 @@ if (isset($_SESSION["user_id"])){
         <div class="featured-store-content scroller">
             <div class="scroller-inner">
                 <!-- Modal trigger -->
-                <img src="..\images\products\Hoodie_Frog1_black.jpg" alt="Hoodie_Frog1_black" id="img-modal-trigger">
+                <img src="..\images\products\Hoodie_Frog1_black.jpg" alt="Hoodie_Frog1_black">
                 <img src="..\images\products\HoodieSet1_blue.jpg" alt="HoodieSet1_blue">
                 <img src="..\images\products\shorts_drawstrings_black.jpg" alt="shorts_drawstrings_black">
                 <img src="..\images\products\sweatpants1_darkgrey.jpg" alt="sweatpants1_darkgrey">
@@ -146,6 +145,7 @@ if (isset($_SESSION["user_id"])){
         <div class="left">
             <!-- Modal trigger -->
             <img src="..\images\products\Hoodie_Frog1_black.jpg" alt="Hoodie_Frog1_black" id="img-modal-trigger">
+            
             <!-- img modal-->    
             <div class="img-modal" id="img-modal">
                     <!-- img modal close button -->
@@ -156,7 +156,21 @@ if (isset($_SESSION["user_id"])){
                         <?php echo $product_name ?> <?php echo $price ?>
                         <p> <?php echo $description ?> </p>
                     </div>
-            </div>
+                </div>
+                    <?php
+                    // set quantity 
+                    echo '<form action="Cart.php" method="GET">';
+                    echo '<select name="qty">';
+                    for ($qty = 1; $qty <= 30; $qty++) {
+                        echo "<option value='$qty'>$qty</option>";
+                    }
+                    echo '</select>';
+                    echo "<input type=\"hidden\" name=\"product\" value=\"$product_name\"/>";
+                    echo "<input type=\"hidden\" name=\"price\" value=\"$price\"/>";
+                    echo '<input type=submit value="Add to Cart"\>';
+                    echo '</form>';
+                    ?> 
+                </div>
         </div>
         <div class="right"></div>
     </div>
