@@ -255,9 +255,34 @@ body {
 
 .tab-content-item { 
     border-style: solid;
-    width: 20rem;
+    margin-inline: 150px;
     padding: 50px 550px;
+    border-radius: 10px;
+    background-color: rgb(230, 230, 230);
 }
+
+.tab-content-item > .comment-username {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.tab-content-item > .comment-text {
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.tab-content-item > .comment-rating {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.star-rating {
+    font-weight: 600;
+    font-size: 25px;
+    color: gold;
+    text-shadow: 2px 2px #636363;
+}
+
 
 .tab-link { 
     text-decoration: none;

@@ -13,7 +13,7 @@ if (isset($_SESSION["user_id"])){
     $mysqli = require __DIR__ . "/Database.php";
 
     $sql = "SELECT * FROM user
-            WHERE ID = {$_SESSION["user_id"]}";
+            WHERE USER_ID = {$_SESSION["user_id"]}";
 
             $result = $mysqli->query($sql);
             $user = $result->fetch_assoc();
@@ -115,7 +115,7 @@ if (isset($_SESSION["user_id"])){
         <div class="featured-store-content scroller">
             <div class="scroller-inner">
                 <!-- Modal trigger -->
-                <img src="..\images\products\Hoodie_Frog1_black.jpg" alt="Hoodie_Frog1_black">
+                <img src="..\images\products\Hoodie_Frog1_black.jpg" alt="Hoodie_Frog1_black" id=img-modal-trigger>
                 <img src="..\images\products\HoodieSet1_blue.jpg" alt="HoodieSet1_blue">
                 <img src="..\images\products\shorts_drawstrings_black.jpg" alt="shorts_drawstrings_black">
                 <img src="..\images\products\sweatpants1_darkgrey.jpg" alt="sweatpants1_darkgrey">
@@ -141,39 +141,44 @@ if (isset($_SESSION["user_id"])){
     </div>
 </div>
 
-    <div class="img-modal-container">
-        <div class="left">
-            <!-- Modal trigger -->
-            <img src="..\images\products\Hoodie_Frog1_black.jpg" alt="Hoodie_Frog1_black" id="img-modal-trigger">
-            
-            <!-- img modal-->    
-            <div class="img-modal" id="img-modal">
-                    <!-- img modal close button -->
-                    <span class="close-img-modal">&times;</span>
+    <!-- <div class="img-modal-container">     -->
+        <!-- img modal-->    
+        <div class="img-modal" id="img-modal">
+            <!-- img modal close button -->
+                <span class="close-img-modal">&times;</span>
+            <div class="modal-left">
+                <div class="item-img">
                     <!-- img modal content -->
-                    <img src="" alt="" class="modal-content" id="img01">
-                    <div class="product-content">
-                        <?php echo $product_name ?> <?php echo $price ?>
-                        <p> <?php echo $description ?> </p>
-                    </div>
+                    <img src="..\images\products\Hoodie_Frog1_black.jpg" alt="" class="modal-content" id="img01">  
                 </div>
+                
+            </div>    
+            
+            <div class="modal-right">
+                <div class="product-content">
+                    <p class="item-description"> <?php echo $description ?> </p>
+                    <?php echo $product_name ?> <?php echo $price ?>
+                </div>
+
+                <div class="qty-selector">
                     <?php
-                    // set quantity 
-                    echo '<form action="Cart.php" method="GET">';
-                    echo '<select name="qty">';
-                    for ($qty = 1; $qty <= 30; $qty++) {
-                        echo "<option value='$qty'>$qty</option>";
-                    }
-                    echo '</select>';
-                    echo "<input type=\"hidden\" name=\"product\" value=\"$product_name\"/>";
-                    echo "<input type=\"hidden\" name=\"price\" value=\"$price\"/>";
-                    echo '<input type=submit value="Add to Cart"\>';
-                    echo '</form>';
+                        // set quantity 
+                        echo '<form action="Cart.php" method="GET">';
+                        echo '<select name="qty">';
+                        for ($qty = 1; $qty <= 30; $qty++) {
+                            echo "<option value='$qty'>$qty</option>";
+                        }
+                        echo '</select>';
+                        echo "<input type=\"hidden\" name=\"product\" value=\"$product_name\"/>";
+                        echo "<input type=\"hidden\" name=\"price\" value=\"$price\"/>";
+                        echo '<input type=submit value="Add to Cart"\>';
+                        echo '</form>';
                     ?> 
                 </div>
+            </div>
+
         </div>
-        <div class="right"></div>
-    </div>
+
     <div class="footer-bottom">
         <p>&copy; 2023 eCommerce. All rights reserved.</p>
     </div>

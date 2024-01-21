@@ -5,7 +5,7 @@ if (isset($_SESSION["user_id"])){
     $mysqli = require __DIR__ . "/Database.php";
 
     $sql = "SELECT * FROM user
-            WHERE ID = {$_SESSION["user_id"]}";
+            WHERE USER_ID = {$_SESSION["user_id"]}";
 
             $result = $mysqli->query($sql);
             $user = $result->fetch_assoc();
@@ -123,7 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["username"]) && isset($
 
         <h1>Update User Information</h1>
         <form class="update-form" action="UpdateValidation.php" id="update" method="post">
-            <input type="hidden" name="user_id" value="<?php echo $user['ID']; ?>">
+            <input type="hidden" name="user_id" value="<?php echo $user['USER_ID']; ?>">
             <div>
             <label for="username">Username:</label>
             <input type="text" name="username" id="username" value="<?php echo $user['USERNAME']; ?>" required><br>
@@ -414,7 +414,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["username"]) && isset($
         </form>
         <h1>Update Password</h1>
         <form class="password-update-form" action="PasswordValidation.php" id="passwordupdate" method="post">
-        <input type="hidden" name="user_id" value="<?php echo $user['ID']; ?>">
+        <input type="hidden" name="user_id" value="<?php echo $user['USER_ID']; ?>">
         <div>
           <label for="oldpassword">Current Password</label>
             <input type="password" id="oldpassword" name="oldpassword" placeholder="Current Password" required>

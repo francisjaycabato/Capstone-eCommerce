@@ -6,7 +6,7 @@ if (isset($_SESSION["user_id"])){
     $mysqli = require __DIR__ . "/Database.php";
 
     $sql = "SELECT * FROM user
-            WHERE ID = {$_SESSION["user_id"]}";
+            WHERE USER_ID = {$_SESSION["user_id"]}";
 
             $result = $mysqli->query($sql);
             $user = $result->fetch_assoc();
@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Prepare the SQL statement for updating the user
-    $sql = "UPDATE user SET PASSWORD_HASH = ? WHERE ID = ?";
+    $sql = "UPDATE user SET PASSWORD_HASH = ? WHERE USER_ID = ?";
 
     $stmt = $mysqli->stmt_init();
 

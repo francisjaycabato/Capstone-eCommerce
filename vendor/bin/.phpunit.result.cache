@@ -1,0 +1,1 @@
+{"version":1,"defects":{"CartTest::testGetSalesTax":8,"PasswordValidationTest::testCorrectPasswordChange":8,"UpdateValidationTest::testValidUpdate":8},"times":{"CartTest::testGetSalesTax":0.011,"PasswordValidationTest::testCorrectPasswordChange":0.023,"UpdateValidationTest::testValidUpdate":0.052}}

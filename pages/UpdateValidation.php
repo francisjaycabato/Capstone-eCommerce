@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Prepare the SQL statement for updating the user
-    $sql = "UPDATE user SET USERNAME = ?, FNAME = ?, LNAME = ?, COUNTRY = ?, EMAIL = ? WHERE ID = ?";
+    $sql = "UPDATE user SET USERNAME = ?, FNAME = ?, LNAME = ?, COUNTRY = ?, EMAIL = ? WHERE USER_ID = ?";
 
     $stmt = $mysqli->stmt_init();
 

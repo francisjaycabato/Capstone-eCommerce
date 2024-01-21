@@ -12,7 +12,7 @@ if (isset($_SESSION["user_id"])){
     $mysqli = require __DIR__ . "/Database.php";
 
     $sql = "SELECT * FROM user
-            WHERE ID = {$_SESSION["user_id"]}";
+            WHERE USER_ID = {$_SESSION["user_id"]}";
 
             $result = $mysqli->query($sql);
             $user = $result->fetch_assoc();
@@ -27,7 +27,7 @@ if (isset($_SESSION["user_id"])){
 // To delete users
 if (isset($_GET['delete-id'])) {
     $id = $_GET['delete-id'];
-    $delete = "DELETE FROM user WHERE ID=$id";
+    $delete = "DELETE FROM user WHERE USER_ID=$id";
     if ($mysqli->query($delete) === TRUE) {
       echo "<script>alert('User deleted successfully');</script>";
       //header("Location: AdminHomePage.php");
@@ -95,7 +95,7 @@ if (isset($_GET['delete-id'])) {
     <?php endif; ?>
     <table>
     <tr>
-        <th>ID</th>
+        <th>User ID</th>
         <th>Username</th>
         <th>First Name</th>
         <th>Last Name</th>
@@ -109,7 +109,7 @@ if (isset($_GET['delete-id'])) {
     </tr>
 
     <?php
-        $sql2 = "SELECT ID, USERNAME, FNAME, LNAME, COUNTRY, EMAIL, IS_VENDOR, IS_ADMIN FROM user";
+        $sql2 = "SELECT USER_ID, USERNAME, FNAME, LNAME, COUNTRY, EMAIL, IS_VENDOR, IS_ADMIN FROM user";
 
         $result2 = $mysqli->query($sql2);
 
@@ -132,7 +132,7 @@ if (isset($_GET['delete-id'])) {
                 else{
                     $is_admin = "Yes";
                 }
-                echo "<tr><td>". $row["ID"]."</td>
+                echo "<tr><td>". $row["USER_ID"]."</td>
                 <td>". $row["USERNAME"]."</td>
                 <td>". $row["FNAME"]."</td>
                 <td>".$row["LNAME"]."</td>
@@ -141,7 +141,7 @@ if (isset($_GET['delete-id'])) {
                 <td>". $is_vendor."</td>
                 <td>". $is_admin."</td>
                 <td>
-                <a href='AdminHomePage.php?delete-id=".$row['ID']."' class='btn' >Delete</a>
+                <a href='AdminHomePage.php?delete-id=".$row['USER_ID']."' class='btn' >Delete</a>
                 </td>
                 </tr>";
             }

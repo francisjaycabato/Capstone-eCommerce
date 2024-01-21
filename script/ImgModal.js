@@ -6,8 +6,8 @@ var img = document.getElementById("img-modal-trigger");
 var modalImg = document.getElementById("img01");
 var productText = document.getElementById("product-content");
 img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
+  modal.style.display = "grid";
+  // modalImg.src = this.src;
   productText.innerHTML = this.alt;
 }
 

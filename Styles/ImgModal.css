@@ -1,7 +1,7 @@
-.img-modal-container {
+/* .img-modal-container {
     display: grid;
     grid-template-columns: auto auto;
-}
+} */
 
 #img-modal-trigger {
     border-radius: 5px;
@@ -15,6 +15,8 @@
 .img-modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
+    grid-template-columns: auto auto;
+    column-gap: 0px;
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
@@ -34,7 +36,25 @@
     max-width: 700px;
 }
 
+.modal-left {
+    display: flex;
+    border-style: solid;
+    justify-content: flex-end;
+    background-color: blue;
+}
+
+.item-img{float:right;}
+
+.modal-right {
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    background-color: lightblue;
+}
+
+
 .product-content {
+    /* border-style: solid; */
     margin: auto;
     display: block;
     width: 80%;
@@ -43,6 +63,7 @@
     color: #ccc;
     padding: 10px 0;
     height: 150px;
+    background-color: red;
 }
 
 /* Add Animation - Zoom in the Modal */

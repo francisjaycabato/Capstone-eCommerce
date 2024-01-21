@@ -29,14 +29,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
                 session_start();
                 session_regenerate_id();
-                $_SESSION["user_id"] = $user["ID"];
+                $_SESSION["user_id"] = $user["USER_ID"];
 
                 header("Location: AdminHomePage.php");
                 exit;
             } if ($user["IS_VENDOR"] == 1) {
                 session_start();
                 session_regenerate_id();
-                $_SESSION["user_id"] = $user["ID"];
+                $_SESSION["user_id"] = $user["USER_ID"];
 
                 header("Location: VendorPage.php");
                 exit;
@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             } else {
                 session_start();
                 session_regenerate_id();
-                $_SESSION["user_id"] = $user["ID"];
+                $_SESSION["user_id"] = $user["USER_ID"];
 
                 header("Location: HomePage.php");
                 exit;
